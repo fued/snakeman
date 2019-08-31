@@ -223,7 +223,8 @@ float isHurt=0;
                     break;
 
                 }
-             
+                 yield return new WaitForSeconds(0.33f);
+    
           isSwinging=false;
     }
 

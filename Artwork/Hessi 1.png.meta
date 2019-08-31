@@ -1,0 +1,1267 @@
+fileFormatVersion: 2
+guid: 246e90bcd884d9a4a9e31c10b907dc01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7978252101491093996
+    second: Hessi 1_0
+  - first:
+      213: -6582652070048206874
+    second: Hessi 1_1
+  - first:
+      213: -6180775688441014995
+    second: Hessi 1_2
+  - first:
+      213: 1094996566524546146
+    second: Hessi 1_3
+  - first:
+      213: 8885946423867198942
+    second: Hessi 1_4
+  - first:
+      213: 4264768872046302235
+    second: Hessi 1_5
+  - first:
+      213: -7951411805967758592
+    second: Hessi 1_6
+  - first:
+      213: 4763554554605624745
+    second: Hessi 1_7
+  - first:
+      213: -6825416131628101487
+    second: Hessi 1_8
+  - first:
+      213: -604430553640946394
+    second: Hessi 1_9
+  - first:
+      213: 9190714398729123938
+    second: Hessi 1_10
+  - first:
+      213: 4413995405077528463
+    second: Hessi 1_11
+  - first:
+      213: 6225643185784767947
+    second: Hessi 1_12
+  - first:
+      213: 261981836612950439
+    second: Hessi 1_13
+  - first:
+      213: 80702438203268515
+    second: Hessi 1_14
+  - first:
+      213: -5442369974251828118
+    second: Hessi 1_15
+  - first:
+      213: -4700531608260203501
+    second: Hessi 1_16
+  - first:
+      213: -4499764453978692068
+    second: Hessi 1_17
+  - first:
+      213: -3353824545805553139
+    second: Hessi 1_18
+  - first:
+      213: -7387225208047009149
+    second: Hessi 1_19
+  - first:
+      213: -4044869043680671124
+    second: Hessi 1_20
+  - first:
+      213: -1835780271051707105
+    second: Hessi 1_21
+  - first:
+      213: 6355821620876333799
+    second: Hessi 1_22
+  - first:
+      213: -7870878899231902140
+    second: Hessi 1_23
+  - first:
+      213: 1555930390774620609
+    second: Hessi 1_24
+  - first:
+      213: -6095686925347211710
+    second: Hessi 1_25
+  - first:
+      213: -44925983183548810
+    second: Hessi 1_26
+  - first:
+      213: 3126542306754399101
+    second: Hessi 1_27
+  - first:
+      213: 3105863575681574866
+    second: Hessi 1_28
+  - first:
+      213: -3278611751882735447
+    second: Hessi 1_29
+  - first:
+      213: 2263908447847693384
+    second: Hessi 1_30
+  - first:
+      213: 4825718076719919516
+    second: Hessi 1_31
+  - first:
+      213: -2972470060237031230
+    second: Hessi 1_32
+  - first:
+      213: 2507052312127860589
+    second: Hessi 1_33
+  - first:
+      213: -6571306237464305989
+    second: Hessi 1_34
+  - first:
+      213: 8282295168501773157
+    second: Hessi 1_35
+  - first:
+      213: 5881900517659257457
+    second: Hessi 1_36
+  - first:
+      213: -3637937389395008782
+    second: Hessi 1_37
+  - first:
+      213: -2296311108443485410
+    second: Hessi 1_38
+  - first:
+      213: -7866468009058549300
+    second: Hessi 1_39
+  - first:
+      213: -8669738101913601633
+    second: Hessi 1_40
+  - first:
+      213: 7788970296139377411
+    second: Hessi 1_41
+  - first:
+      213: 8244220351456326983
+    second: Hessi 1_42
+  - first:
+      213: -6878694382369094637
+    second: Hessi 1_43
+  - first:
+      213: -2214307129111234885
+    second: Hessi 1_44
+  - first:
+      213: -8969311252296765375
+    second: Hessi 1_45
+  - first:
+      213: 8842213326093522753
+    second: Hessi 1_46
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hessi 1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 733
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99e00c9d8c123c45ab44abaa5a75a50
+      internalID: -7978252101491093996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 733
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8f51dcd5998f04799aa1528cb0e94a
+      internalID: -6582652070048206874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 733
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17f71de4d7550d8489259d1343540259
+      internalID: -6180775688441014995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 733
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3938ce8dfa00d94fbfbe19bc4b1bad7
+      internalID: 1094996566524546146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3094537c38255c4c8b07d384b1b5f36
+      internalID: 8885946423867198942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462ba8239d5b4e445833507059d15b1d
+      internalID: 4264768872046302235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_6
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 733
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a168c5ee5774226428c626a6b8e65b63
+      internalID: -7951411805967758592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_7
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 733
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6086357084379f54bae96e4eaed46dc5
+      internalID: 4763554554605624745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_8
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ec63f2c5312254c9750fd3dffbd788
+      internalID: -6825416131628101487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 733
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15af0b3de7eab345b525e242fafdc69
+      internalID: -604430553640946394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_10
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 733
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3227817575c334394fd919fa87e309
+      internalID: 9190714398729123938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafc39a67edbe434db24062876998573
+      internalID: 4413995405077528463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_12
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61fa75a5c18eb84b868c85b32d61027
+      internalID: 6225643185784767947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_13
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad67177660427a54994cf6657c920240
+      internalID: 261981836612950439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_14
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a599754854aad0f4eadab66ea1c66a9a
+      internalID: 80702438203268515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_15
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7232457d0143f0b468877953298eb4a4
+      internalID: -5442369974251828118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_16
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bdc94f350364d49974b0b5a19dc023
+      internalID: -4700531608260203501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_17
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 733
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c78c7f6a254f3f48991265b21295b2d
+      internalID: -4499764453978692068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_18
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 704
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb22743a7a907141908690ade48d874
+      internalID: -3353824545805553139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_19
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 666
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbd45b223935e04c872b56d1f79f748
+      internalID: -7387225208047009149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_20
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 666
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d4f76e5f614d440bae4f944eba1cb7
+      internalID: -4044869043680671124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 666
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb88569d5fa604747a0f2fc2eeeb861b
+      internalID: -1835780271051707105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 666
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2732a1e6154642941925b058b73b8394
+      internalID: 6355821620876333799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6c4ad49280b5a4784fdcba717c4991
+      internalID: -7870878899231902140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_24
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dd64382734a4f4896521f80c5b03d5
+      internalID: 1555930390774620609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_25
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 669
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc6af46461e5774b827b1223f1edabc
+      internalID: -6095686925347211710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_26
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 669
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532b7a82fa01e4a47b932ef6161d7e64
+      internalID: -44925983183548810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_27
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59ff3c14c123f144b66621196a8ef83
+      internalID: 3126542306754399101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_28
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 669
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd66bb49bc54804d85d59ad870e89aa
+      internalID: 3105863575681574866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_29
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 669
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1280ec76b0cf442801f3c7fead8cc7
+      internalID: -3278611751882735447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_30
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 669
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de60a392ca50784bb719ecde8a3cf00
+      internalID: 2263908447847693384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_31
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1ba28a5c08b3548a0ea516efdc890c
+      internalID: 4825718076719919516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_32
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc10de3959aca842a84e6a338cb192d
+      internalID: -2972470060237031230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_33
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b56736c4e576c4bb3d08751437adf0
+      internalID: 2507052312127860589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_34
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06355c4733ff82d4e8dda390499937f7
+      internalID: -6571306237464305989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_35
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60ae97ba18636a5489d557e4df27bbc3
+      internalID: 8282295168501773157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_36
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd027b37896b604597368cfdb6d406c
+      internalID: 5881900517659257457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_37
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 669
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1939d0778c17c7847a662dd3d81b4e50
+      internalID: -3637937389395008782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_38
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 637
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f032e2787e3834d85b8ea689a11254
+      internalID: -2296311108443485410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_39
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 574
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ded6f0de5a427a4f8f07ec5fb2432d6
+      internalID: -7866468009058549300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_40
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 508
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d30270a8aa2744e94a64c80a661253
+      internalID: -8669738101913601633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_41
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 430
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6f06bb886095e4eaa612f3d26f36b8
+      internalID: 7788970296139377411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_42
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 430
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70850b769ae57e941abce4910a313ff9
+      internalID: 8244220351456326983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_43
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 357
+        width: 33
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c74fcf130e4a6543bdfd41c357019e4
+      internalID: -6878694382369094637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_44
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 356
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fa9d3d75649b34fa612ae1f0678de2
+      internalID: -2214307129111234885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_45
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 356
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a225550560f46ec45a426bdf221e503e
+      internalID: -8969311252296765375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hessi 1_46
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 297
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3d9e31116fd246439fa9672c3758ad7
+      internalID: 8842213326093522753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

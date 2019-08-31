@@ -20,7 +20,43 @@ float alivetime;
         if(Time.realtimeSinceStartup>alivetime){
            GameObject explosion = GameObject.Instantiate(Explosion);
            explosion.transform.position = this.transform.position;
+           explosion.name = "Explosion";
            Destroy(this.gameObject);
+        }
+        float timeLeft = alivetime-Time.realtimeSinceStartup;
+   
+        if(timeLeft<2){
+            this.GetComponent<SpriteRenderer>().color =Color.white;
+            if(timeLeft<1.75f){
+                 this.GetComponent<SpriteRenderer>().color =Color.red;
+                if(timeLeft<1.5f){
+                    this.GetComponent<SpriteRenderer>().color =Color.white;
+                    if(timeLeft<1.25f){
+                         this.GetComponent<SpriteRenderer>().color =Color.red;
+                        if(timeLeft<1f){
+                                 this.GetComponent<SpriteRenderer>().color =Color.white;
+                            if(timeLeft<0.85f){
+                                 this.GetComponent<SpriteRenderer>().color =Color.red;
+                                if(timeLeft<0.7f){
+                                         this.GetComponent<SpriteRenderer>().color =Color.white;
+                                    if(timeLeft<0.55f){
+ this.GetComponent<SpriteRenderer>().color =Color.red;
+  if(timeLeft<0.4f){
+ this.GetComponent<SpriteRenderer>().color =Color.white;
+   if(timeLeft<0.25f){
+ this.GetComponent<SpriteRenderer>().color =Color.red;
+    if(timeLeft<0.1f){
+ this.GetComponent<SpriteRenderer>().color =Color.white;
+    }
+   }
+  }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

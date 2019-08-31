@@ -6,6 +6,7 @@ public class SlashController : MonoBehaviour
 {
 
         public  PlayerController.direction CurrentDirection;
+        
     public float LifeTime = 0.5f;
     float alivetime;
     // Start is called before the first frame update

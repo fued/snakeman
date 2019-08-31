@@ -98,10 +98,12 @@ float isHurt=0;
                 switch(CurrentDirection)
                 {
                     case direction.up:
-                 
+                      setFalse(thisAnimator);
+              thisAnimator.SetBool("swingUp",true);
                     break;
                     case direction.down:
-              
+                          setFalse(thisAnimator);
+              thisAnimator.SetBool("swingDown",true);
                     break;
                     case direction.left:
                           setFalse(thisAnimator);
@@ -184,7 +186,7 @@ float isHurt=0;
     IEnumerator SlashWait() 
     {
        
-               yield return new WaitForSeconds(0.5f);
+               yield return new WaitForSeconds(0.33f);
     
                 CurrentSlash  = GameObject.Instantiate(Slash);
                 CurrentSlash.name = "Slash";
@@ -194,27 +196,35 @@ float isHurt=0;
          switch(CurrentDirection)
                 {
                     case direction.up:
+                         setFalse(thisAnimator);
+                  thisAnimator.SetBool("idleUp",true);
                         CurrentSlash.transform.position = new Vector2(this.transform.position.x,this.transform.position.y+0.66f);
                            CurrentSlash.transform.eulerAngles = new Vector3(0,0,0);
                     break;
                     case direction.down:
+                         setFalse(thisAnimator);
+                  thisAnimator.SetBool("idleDown",true);
                         CurrentSlash.transform.position = new Vector2(this.transform.position.x,this.transform.position.y-0.66f);
                              CurrentSlash.transform.eulerAngles = new Vector3(0,0,180);
+                             CurrentSlash.GetComponent<SpriteRenderer>().flipX = true;
                     break;
                     case direction.left:
-                      
+                           setFalse(thisAnimator);
+                  thisAnimator.SetBool("idleSideways",true);
                         CurrentSlash.transform.position = new Vector2(this.transform.position.x-0.66f,this.transform.position.y);
                              CurrentSlash.transform.eulerAngles = new Vector3(0,0,90);
                     break;
                     case direction.right:
-                      
+                           setFalse(thisAnimator);
+                  thisAnimator.SetBool("idleSideways",true);
                         CurrentSlash.transform.position = new Vector2(this.transform.position.x+0.66f,this.transform.position.y);
                              CurrentSlash.transform.eulerAngles = new Vector3(0,0,270);
+                              CurrentSlash.GetComponent<SpriteRenderer>().flipX = true;
                     break;
 
                 }
-                  setFalse(thisAnimator);
-                  thisAnimator.SetBool("idleSideways",true);
+                 yield return new WaitForSeconds(0.33f);
+    
           isSwinging=false;
     }
 

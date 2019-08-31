@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 117455324}
   - component: {fileID: 117455325}
   m_Layer: 0
-  m_Name: Wait (1)
+  m_Name: (1) Wait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &117455325
 MonoBehaviour:
@@ -292,6 +292,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 813256122}
   - {fileID: 1819643658}
   - {fileID: 117455324}
   - {fileID: 279871041}
@@ -331,6 +332,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 813256123}
+        m_MethodName: SwitchTrack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &194643928
@@ -344,7 +356,7 @@ GameObject:
   - component: {fileID: 194643929}
   - component: {fileID: 194643930}
   m_Layer: 0
-  m_Name: Dialoge (5)
+  m_Name: (5) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -362,7 +374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194643930
 MonoBehaviour:
@@ -406,7 +418,7 @@ GameObject:
   - component: {fileID: 279871041}
   - component: {fileID: 279871042}
   m_Layer: 0
-  m_Name: Dialoge (2)
+  m_Name: (2) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,7 +436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &279871042
 MonoBehaviour:
@@ -617,6 +629,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseKey: 27
   _pauseMenu: {fileID: 0}
+--- !u!1 &813256121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813256122}
+  - component: {fileID: 813256123}
+  m_Layer: 0
+  m_Name: (1) TrackPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813256122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813256121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 193577460}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813256123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813256121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d106d89f7de8cd342aec3b60078cbe90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _track: 1
 --- !u!1001 &909071984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -753,7 +809,7 @@ GameObject:
   - component: {fileID: 1044549622}
   - component: {fileID: 1044549623}
   m_Layer: 0
-  m_Name: Dialoge (6)
+  m_Name: (6) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,7 +827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044549623
 MonoBehaviour:
@@ -815,7 +871,7 @@ GameObject:
   - component: {fileID: 1730873656}
   - component: {fileID: 1730873657}
   m_Layer: 0
-  m_Name: Dialoge (4)
+  m_Name: (4) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +889,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1730873657
 MonoBehaviour:
@@ -878,7 +934,7 @@ GameObject:
   - component: {fileID: 1740135045}
   - component: {fileID: 1740135046}
   m_Layer: 0
-  m_Name: Dialoge (7)
+  m_Name: (7) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1740135046
 MonoBehaviour:
@@ -930,7 +986,7 @@ GameObject:
   - component: {fileID: 1819643658}
   - component: {fileID: 1819643659}
   m_Layer: 0
-  m_Name: Dialoge (1)
+  m_Name: (1) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,7 +1004,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1819643659
 MonoBehaviour:
@@ -1057,7 +1113,7 @@ GameObject:
   - component: {fileID: 1979174278}
   - component: {fileID: 1979174279}
   m_Layer: 0
-  m_Name: Dialoge (3)
+  m_Name: (3) Dialoge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979174279
 MonoBehaviour:

@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1280, y: 280}
+  m_SizeDelta: {x: 1280, y: 278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6863356060805743331
 CanvasRenderer:
@@ -132,7 +132,6 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _rectTransform: {fileID: 6863356061142029970}
-  _background: {fileID: 6863356060805743330}
   _textBox: {fileID: 6863356061315041781}
   _portrait: {fileID: 5040030365107030173}
   _text: 
@@ -330,7 +329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -176, y: -48}
+  m_AnchoredPosition: {x: -176, y: -47}
   m_SizeDelta: {x: 192, y: 192}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &8028913893575965716

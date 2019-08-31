@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
+    public enum TrackList
+    {
+        Silence = 0,
+        Jungle,
+        Sample,
+    }
+
     private static AudioManager _instance = null;
 
     public float bpm = 140.0f;
@@ -17,40 +25,68 @@ public class AudioManager : MonoBehaviour
 
     private float _musicVolume = 1f;
 
+    private bool _keepFadingIn = false;
+    private bool _keepFadingOut = false;
+
+    private float _fadeMultiplier = 1f;
+
+    [SerializeField]
+    private float _fadeTime = 2f;
+
     public static AudioManager Get()
     {
+        if (null == _instance)
+        {
+            GameObject audioManagerPrefab = Resources.Load<GameObject>("Prefabs/AudioManager");
+            GameObject audioManagerObject = Instantiate<GameObject>(audioManagerPrefab);
+
+            _instance = audioManagerObject.GetComponent<AudioManager>();
+            _instance.Setup();
+            DontDestroyOnLoad(_instance);
+        }
+
         return _instance;
     }
 
-    public void PlayTrack(int idx)
+    private IEnumerator InvokeRealtimeCoroutine(UnityAction action, float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        if (action != null)
+        {
+            action();
+        }
+    }
+
+    public void PlayTrack(TrackList idx)
     {
         nextEventTime = AudioSettings.dspTime + 2.0f;
 
-        audioSources[1 - flip].clip = clips[idx];
+        audioSources[1 - flip].clip = clips[(int)idx];
         audioSources[1 - flip].PlayScheduled(nextEventTime);
+
+        StartFadeOut();
+        StartCoroutine(InvokeRealtimeCoroutine(StartFadeIn, 2f));
     }
 
     void Start()
     {
-        if (null == _instance)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else
+        if (Get() != this)
         {
             Destroy(gameObject);
             return;
         }
+    }
 
+    private void Setup()
+    {
         for (int i = 0; i < 2; i++)
         {
-            GameObject child = new GameObject("Player");
+            GameObject child = new GameObject("AudioPlayer");
             child.transform.parent = gameObject.transform;
             audioSources[i] = child.AddComponent<AudioSource>();
         }
 
-        PlayTrack(0);
+        PlayTrack(TrackList.Sample);
         running = true;
     }
 
@@ -61,7 +97,7 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        audioSources[flip].volume = _musicVolume;
+        audioSources[flip].volume = _musicVolume * _fadeMultiplier;
 
         double time = AudioSettings.dspTime;
 
@@ -79,6 +115,44 @@ public class AudioManager : MonoBehaviour
 
             // Flip between two audio sources so that the loading process of one does not interfere with the one that's playing out
             flip = 1 - flip;
+        }
+    }
+
+    private void StartFadeIn()
+    {
+        StartCoroutine(FadeIn());
+    }
+
+    private IEnumerator FadeIn()
+    {
+        _keepFadingIn = true;
+        _keepFadingOut = false;
+
+        _fadeMultiplier = 0f;
+
+        while (_keepFadingIn && (1f !=_fadeMultiplier))
+        {
+            _fadeMultiplier = Mathf.Min(1f, _fadeMultiplier + (0.1f / _fadeTime));
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+    }
+
+    private void StartFadeOut()
+    {
+        StartCoroutine(FadeOut());
+    }
+
+    private IEnumerator FadeOut()
+    {
+        _keepFadingIn = false;
+        _keepFadingOut = true;
+
+        _fadeMultiplier = 1f;
+
+        while (_keepFadingOut && (0f != _fadeMultiplier))
+        {
+            _fadeMultiplier = Mathf.Max(0f, _fadeMultiplier - (0.1f / _fadeTime));
+            yield return new WaitForSecondsRealtime(0.1f);
         }
     }
 }

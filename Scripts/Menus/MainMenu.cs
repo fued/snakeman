@@ -22,7 +22,8 @@ public class MainMenu : MonoBehaviour
     public void OnStartButtonClicked()
     {
         FindObjectOfType<TransitionEffect>().FadeOut();
-        Invoke("ChangeScene", 1f);
+        AudioManager.Get().PlayTrack(AudioManager.TrackList.Silence);
+        Invoke("ChangeScene", 4f);
     }
 
     private void ChangeScene()

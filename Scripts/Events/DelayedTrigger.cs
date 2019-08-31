@@ -15,7 +15,10 @@ public class DelayedTrigger : MonoBehaviour
 
     public void Awake()
     {
-        StartDelay();
+        if (_startOnAwake)
+        {
+            StartDelay();
+        }
     }
 
     public void StartDelay()

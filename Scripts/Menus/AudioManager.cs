@@ -9,14 +9,46 @@ public class AudioManager : MonoBehaviour
     {
         Silence = 0,
         Jungle,
-        Sample,
+        Town,
+    }
+
+    public enum SFX
+    {
+        Bomb_1 = 0,
+        Bomb_2,
+        Bomb_3,
+        Bomb_Hit_Wall,
+        Crate_Push,
+        Dialogue,
+        Door_Open,
+        Enemy_Die_Male,
+        Enemy_Die_Female,
+        Enemy_Hit_1,
+        Enemy_Hit_2,
+        Enemy_Hit_3,
+        Enemy_Yell_1,
+        Enemy_Yell_2,
+        Enemy_Yell_3,
+        Jungle_Attack,
+        Jungle_Cat_See_You_Around,
+        Place_Bomb,
+        Push_Bomb,
+        River,
+        Secret_Opening_Area,
+        Slas_Stick_1,
+        Slas_Stick_2,
+        Slas_Stick_3,
+        Snake_Die,
+        Trigger_Switch,
     }
 
     private static AudioManager _instance = null;
 
     public float bpm = 140.0f;
     public int numBeatsPerSegment = 16;
-    public List<AudioClip> clips = new List<AudioClip>();
+    public List<AudioClip> _clips = new List<AudioClip>();
+
+    public List<AudioClip> _sfx = new List<AudioClip>();
 
     private double nextEventTime;
     private int flip = 0;
@@ -24,6 +56,7 @@ public class AudioManager : MonoBehaviour
     private bool running = false;
 
     private float _musicVolume = 1f;
+    private float _sfxVolume = 1f;
 
     private bool _keepFadingIn = false;
     private bool _keepFadingOut = false;
@@ -67,12 +100,27 @@ public class AudioManager : MonoBehaviour
 
             nextEventTime = AudioSettings.dspTime + 2.0f;
 
-            audioSources[1 - flip].clip = clips[(int)track];
+            audioSources[1 - flip].clip = _clips[(int)track];
             audioSources[1 - flip].PlayScheduled(nextEventTime);
 
             StartFadeOut();
             StartCoroutine(InvokeRealtimeCoroutine(StartFadeIn, 2f));
         }
+    }
+
+    public AudioSource PlaySfxOnce(SFX sfx)
+    {
+        GameObject child = new GameObject("SFXPlayer");
+        child.transform.parent = gameObject.transform;
+        AudioSource audioSource = child.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sfx[(int)sfx], _sfxVolume);
+
+        return audioSource;
+    }
+
+    public float SfxLength(SFX sfx)
+    {
+        return (_sfx[(int)sfx].length);
     }
 
     void Start()
@@ -93,6 +141,8 @@ public class AudioManager : MonoBehaviour
             audioSources[i] = child.AddComponent<AudioSource>();
         }
 
+        PlayTrack(AudioTracks.Silence);
+        audioSources[1 - flip].clip = _clips[(int)AudioTracks.Silence];
         running = true;
     }
 

@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
         Silence = 0,
         Jungle,
         Town,
+        MenuMusic
     }
 
     public enum SFX

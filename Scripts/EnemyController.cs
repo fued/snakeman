@@ -13,6 +13,9 @@ public GameObject BloodSplatter;
     float lastHurt;
     Animator thisAnim;
     float pantheroffset;
+
+    private ObjectState _state = null;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +25,43 @@ public GameObject BloodSplatter;
         thisAnim = this.GetComponent<Animator>();
         Player =   GameObject.Find("character");
             BloodSplatter =   GameObject.Find("splat");
+
+        _state = StatefulObject.GetState(gameObject);
+        if (null == _state)
+        {
+            Debug.Log("What " + GetComponent<StatefulObject>().UniqueID);
+        }
+        
+        if (ObjectState.ObjectStates.Dead == _state.State)
+        {
+            GameObject splatter = GameObject.Instantiate(BloodSplatter);
+            transform.position = _state.Position;
+            splatter.transform.position = this.transform.position;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<PolygonCollider2D>().enabled = false;
+        }
+    }
+
+    private void CheckState()
+    {
+        if (ObjectState.ObjectStates.Dead == _state.State)
+        {
+            GameObject splatter = GameObject.Instantiate(BloodSplatter);
+            transform.position = _state.Position;
+            splatter.transform.position = this.transform.position;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<PolygonCollider2D>().enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (ObjectState.ObjectStates.Dead == _state.State)
+        {
+            return;
+        }
+
         if(Time.timeScale>0){
         if(Vector2.Distance(this.transform.position,Player.transform.position) < detectionRange && !Player.GetComponent<PlayerController>().isDead){
             float xDist = Mathf.Abs(this.transform.position.x-Player.transform.position.x);
@@ -117,7 +152,10 @@ public GameObject BloodSplatter;
                 if(isHurt||enemyType=="panther"){
                         GameObject splatter  = GameObject.Instantiate(BloodSplatter);
 splatter.transform.position = this.transform.position;
-                    Destroy(this.gameObject);
+                    gameObject.SetActive(false);
+                    _state.State = ObjectState.ObjectStates.Dead;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    GetComponent<PolygonCollider2D>().enabled = false;
                 }
                    setFalse(thisAnim);
                 thisAnim.SetBool("IsHurt",true);

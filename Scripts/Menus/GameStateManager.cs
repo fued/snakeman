@@ -112,6 +112,14 @@ public class GameStateManager
 
     public void SetState(int ID, ObjectState state)
     {
-        _objectStateData[ID] = state;
+        if (_objectStateData.ContainsKey(ID))
+        {
+            _objectStateData[ID] = state;
+        }
+        else
+        {
+            _objectStateData.Add(ID, state);
+        }
+            
     }
 }

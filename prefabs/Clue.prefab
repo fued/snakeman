@@ -140,7 +140,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _targetTag: Player
-  _oneshot: 0
+  _oneshot: 1
   _canTriggerOnStart: 0
 --- !u!114 &7843171561409342885
 MonoBehaviour:

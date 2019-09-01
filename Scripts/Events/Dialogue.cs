@@ -42,7 +42,7 @@ public class Dialogue : MonoBehaviour
     private string _text = "";
 
     [SerializeField]
-    private float _textSpeed = 0.1f;
+    private float _textSpeed = 0.2f;
 
     private float _timePassed = 0f;
     private float _lastRealTime = 0f;
@@ -102,7 +102,7 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         GameStateManager.Get().StartDialogue();
-
+ AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Dialogue);
         Setup();
     }
 

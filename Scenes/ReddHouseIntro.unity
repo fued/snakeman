@@ -163,8 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc833329ccde6a84da3a794d89182a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uniqueID: -1
-  _delay: 1.5
+  _delay: 1
   _startOnAwake: 0
   triggered:
     m_PersistentCalls:
@@ -317,7 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc833329ccde6a84da3a794d89182a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uniqueID: -1
   _delay: 0
   _startOnAwake: 1
   triggered:

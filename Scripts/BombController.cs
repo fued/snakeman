@@ -63,7 +63,7 @@ float alivetime;
     void OnTriggerEnter2D(Collider2D coll){
 
         if(coll.gameObject.name=="Slash"){
-      
+         AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Push_Bomb);
             switch(coll.gameObject.GetComponent<SlashController>().CurrentDirection){
                 case PlayerController.direction.up:
                

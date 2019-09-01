@@ -9,6 +9,21 @@ public class ExplosionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        switch(Random.Range(0,3)){
+
+            case 0:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Bomb_1);
+
+            break;
+            case 1:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Bomb_2);
+
+            break;
+            case 2:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Bomb_3);
+
+            break;
+        }
              alivetime = Time.realtimeSinceStartup;
     }
 

@@ -13,12 +13,13 @@ public GameObject BloodSplatter;
     float lastHurt;
     Animator thisAnim;
     float pantheroffset;
-
+bool yelled=false;
     private ObjectState _state = null;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         
         pantheroffset = Random.Range(-0.99f,0.99f);
         StartPosition = this.transform.position;
@@ -56,6 +57,26 @@ public GameObject BloodSplatter;
             float yDist = Mathf.Abs(this.transform.position.y-Player.transform.position.y);
 
             if(!isHurt){
+                if(enemyType!="panther"){
+                    if(!yelled){
+                        yelled=true;
+            switch(Random.Range(0,3)){
+
+            case 0:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Yell_1);
+
+            break;
+            case 1:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Yell_2);
+
+            break;
+            case 2:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Yell_3);
+
+            break;
+        }
+}
+                }
                 if(enemyType=="default"){
                 if(xDist>yDist){
                     setFalse(thisAnim);
@@ -97,7 +118,7 @@ public GameObject BloodSplatter;
             }else{
                 this.GetComponent<SpriteRenderer>().flipX = false;
             }
-                this.transform.position = new Vector2(Mathf.Lerp(this.transform.position.x,Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup)*10),0.04f),this.transform.position.y);
+                this.transform.position = new Vector2(Mathf.Lerp(this.transform.position.x,Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup+pantheroffset)*10),0.04f),this.transform.position.y);
                 }
                 if(enemyType=="hidden"){
                                           if(this.transform.position.x<Player.transform.position.x){
@@ -138,6 +159,15 @@ public GameObject BloodSplatter;
         if(coll.gameObject.name =="Explosion"||coll.gameObject.name=="Slash"){
             if(lastHurt<Time.realtimeSinceStartup){
                 if(isHurt||enemyType=="panther"){
+                    if(enemyType=="panther"){
+                       AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Jungle_Cat_See_You_Around);
+                    }else{
+                        if(thisAnim.name == "Enemy2"){
+                        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Die_Female);
+                        }else{
+                              AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Die_Male);
+                        }
+                    }
                         GameObject splatter  = GameObject.Instantiate(BloodSplatter);
 splatter.transform.position = this.transform.position;
                     _state.State = ObjectState.ObjectStates.Dead;
@@ -146,7 +176,24 @@ splatter.transform.position = this.transform.position;
                     StatefulObject.UpdateState(gameObject, _state);
                     GetComponent<SpriteRenderer>().enabled = false;
                     GetComponent<PolygonCollider2D>().enabled = false;
+                }else{
+                              switch(Random.Range(0,3)){
+
+            case 0:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Hit_1);
+
+            break;
+            case 1:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Hit_2);
+
+            break;
+            case 2:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Enemy_Hit_3);
+
+            break;
+        }
                 }
+
                    setFalse(thisAnim);
                 thisAnim.SetBool("IsHurt",true);
                 isHurt=true;

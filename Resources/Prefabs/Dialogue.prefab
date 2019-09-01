@@ -136,7 +136,7 @@ MonoBehaviour:
   _portrait: {fileID: 5040030365107030173}
   _text: 
   _textSpeed: 0.07
-  _skipKey: 122
+  _skipKey: 32
 --- !u!1 &6863356061315041779
 GameObject:
   m_ObjectHideFlags: 0

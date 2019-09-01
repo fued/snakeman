@@ -20,6 +20,7 @@ public class wallscript : MonoBehaviour
      void OnTriggerEnter2D(Collider2D coll)
     {
           if(coll.gameObject.name =="Explosion"){
+              AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Secret_Opening_Area);
             this.GetComponent<SpriteRenderer>().enabled = false;
             this.GetComponent<BoxCollider2D>().enabled=false;
             tilemaphidden.GetComponent<UnityEngine.Tilemaps.TilemapRenderer>().enabled=true;

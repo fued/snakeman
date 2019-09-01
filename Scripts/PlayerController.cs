@@ -102,6 +102,21 @@ currentSpeed = moveSpeed*Time.timeScale;
         
                isSwinging=true;
                 StartCoroutine("SlashWait");
+                switch(Random.Range(0,3)){
+
+            case 0:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Slas_Stick_1);
+
+            break;
+            case 1:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Slas_Stick_2);
+
+            break;
+            case 2:
+        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Slas_Stick_3);
+
+            break;
+        }
                 switch(CurrentDirection)
                 {
                     case direction.up:
@@ -127,6 +142,8 @@ currentSpeed = moveSpeed*Time.timeScale;
             }
             if(Input.GetKey(KeyCode.LeftShift) ){
                 if(CurrentBomb==null){
+
+                    AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Place_Bomb);
                     CurrentBomb  = GameObject.Instantiate(Bomb);
                 
                     switch(CurrentDirection)
@@ -176,12 +193,13 @@ currentSpeed = moveSpeed*Time.timeScale;
           
                     if(isHurt>Time.realtimeSinceStartup){
                   isDead=true;
+                        AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Snake_Die);
                   deathtime=Time.realtimeSinceStartup+2;
                     setFalse(thisAnimator);
                        thisAnimator.SetBool("IsDead",true);
                        thisRender.color = Color.white;
                 }else{
-
+      AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Bomb_Hit_Wall);
            thisAnimator.SetBool("IsHurt",true);
         isHurt=Time.realtimeSinceStartup+2;
       this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position-col.transform.position)*15,ForceMode2D.Impulse);

@@ -20,6 +20,10 @@ public class Transition : MonoBehaviour
 
     private void ChangeScene()
     {
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "TitleScreen" &&UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "MainMenu" &&UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "EndGame"&&UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Death")
+        {
+            AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Door_Open);
+        }
         UnityEngine.SceneManagement.SceneManager.LoadScene(_targetScene);
     }
 }

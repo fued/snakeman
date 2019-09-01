@@ -102,7 +102,7 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         GameStateManager.Get().StartDialogue();
-
+ AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Dialogue);
         Setup();
     }
 

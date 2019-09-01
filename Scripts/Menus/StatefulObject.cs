@@ -29,34 +29,50 @@ public class StatefulObject : MonoBehaviour
         get { return _uniqueID; }
     }
 
+    private bool _isSetup = false;
+
     protected ObjectState _state = null;
 
     public ObjectState State
     {
-        get { return _state; }
+        get
+        {
+            Setup();
+            return _state;
+        }
         set { _state = value; }
+    }
+
+    public void Setup()
+    {
+        if (!_isSetup)
+        {
+            ObjectState startState = null;
+
+            if (-1 != _uniqueID)
+            {
+                startState = GameStateManager.Get().GetObjectState(_uniqueID);
+            }
+
+            if (null == startState)
+            {
+                _state = new ObjectState();
+                _state.Position = transform.position;
+            }
+            else
+            {
+                _state = startState;
+                transform.position = _state.Position;
+            }
+
+            _isSetup = true;
+        }
     }
 
     // Start is called before the first frame update
     public void Start()
     {
-        ObjectState startState = null;
-
-        if (-1 != _uniqueID)
-        {
-            startState = GameStateManager.Get().GetObjectState(_uniqueID);
-        }
-
-        if (null == startState)
-        {
-            _state = new ObjectState();
-            _state.Position = transform.position;
-        }
-        else
-        {
-            _state = startState;
-            transform.position = _state.Position;
-        }
+        Setup();
     }
 
     public void SaveState()

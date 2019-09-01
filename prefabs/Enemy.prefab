@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4355834516339633048}
   - component: {fileID: 4355834516339633044}
   - component: {fileID: 4355834516339633043}
+  - component: {fileID: 1794208554869336211}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -149,6 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8bed8d5f2d6eb4c9fd1ca5d6ac8101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: default
+  detectionRange: 4
+  BloodSplatter: {fileID: 0}
   Player: {fileID: 0}
 --- !u!95 &4355834516339633043
 Animator:
@@ -169,3 +173,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1794208554869336211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4355834516339633049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954055a3e2cce0c47a55cbb5ccfc98e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uniqueID: -1

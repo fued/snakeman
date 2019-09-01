@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
         Silence = 0,
         Jungle,
         Town,
-        MenuMusic
+        MenuMusic,
     }
 
     public enum SFX
@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         Slas_Stick_3,
         Snake_Die,
         Trigger_Switch,
+        Snakeman_Dialogue,
     }
 
     private static AudioManager _instance = null;

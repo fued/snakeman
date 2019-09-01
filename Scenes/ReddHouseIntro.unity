@@ -149,7 +149,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &117455325
 MonoBehaviour:
@@ -292,7 +292,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 813256122}
   - {fileID: 1819643658}
   - {fileID: 117455324}
   - {fileID: 279871041}
@@ -323,17 +322,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1819643659}
         m_MethodName: SpawnDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 813256123}
-        m_MethodName: SwitchTrack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -374,7 +362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &194643930
 MonoBehaviour:
@@ -407,6 +395,7 @@ MonoBehaviour:
   _portrait: {fileID: 1097057196623427827, guid: 9740215943ac20840abe26756c6afd30,
     type: 3}
   _text: Me?! I committed no crime in the night!
+  _dialogSound: 26
 --- !u!1 &279871040
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &279871042
 MonoBehaviour:
@@ -472,6 +461,7 @@ MonoBehaviour:
 
 
     He''s been murdered!'
+  _dialogSound: 5
 --- !u!1 &507235200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,50 +1064,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseKey: 27
   _pauseMenu: {fileID: 0}
---- !u!1 &813256121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 813256122}
-  - component: {fileID: 813256123}
-  m_Layer: 0
-  m_Name: (1) TrackPlayer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &813256122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813256121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 193577460}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &813256123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813256121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d106d89f7de8cd342aec3b60078cbe90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _track: 1
 --- !u!1 &849177799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5568,7 +5514,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044549623
 MonoBehaviour:
@@ -5601,6 +5547,7 @@ MonoBehaviour:
   _portrait: {fileID: 1402125237011173283, guid: 9740215943ac20840abe26756c6afd30,
     type: 3}
   _text: And my business in the bushes is strictly my own!
+  _dialogSound: 26
 --- !u!1 &1129285593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,7 +5702,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1730873657
 MonoBehaviour:
@@ -5789,6 +5736,7 @@ MonoBehaviour:
     type: 3}
   _text: I'll tell you who's done it! That maniac Kshilan Hassi was rummaging through
     the bushes near my hut last night!
+  _dialogSound: 5
 --- !u!1 &1740135044
 GameObject:
   m_ObjectHideFlags: 0
@@ -5818,7 +5766,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1740135046
 MonoBehaviour:
@@ -5852,6 +5800,7 @@ MonoBehaviour:
     type: 3}
   _text: The chief was right to never trust you, Kshila. We never should have let
     you stay here. Now, accept your punishment!
+  _dialogSound: 5
 --- !u!1 &1819643657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5881,7 +5830,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1819643659
 MonoBehaviour:
@@ -5913,6 +5862,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   _portrait: {fileID: 0}
   _text: Aaaaaarrrgghh!
+  _dialogSound: 7
 --- !u!1 &1910794739
 GameObject:
   m_ObjectHideFlags: 0
@@ -6008,7 +5958,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193577460}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1979174279
 MonoBehaviour:
@@ -6042,6 +5992,7 @@ MonoBehaviour:
     type: 3}
   _text: Our chief has been stolen from us! Retribution must be served for the murder
     of Redd Herring!
+  _dialogSound: 5
 --- !u!1 &2022705478
 GameObject:
   m_ObjectHideFlags: 0

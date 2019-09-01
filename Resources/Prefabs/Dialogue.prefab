@@ -137,6 +137,7 @@ MonoBehaviour:
   _text: 
   _textSpeed: 0.07
   _skipKey: 32
+  _dialogSound: 5
 --- !u!1 &6863356061315041779
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 200, y: 10}
-  m_SizeDelta: {x: 730, y: 130}
+  m_SizeDelta: {x: 710, y: 130}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6863356061315041782
 CanvasRenderer:

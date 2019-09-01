@@ -13,6 +13,7 @@ GameObject CurrentSlash;
 float isHurt=0;
 
     public float moveSpeed;
+    float currentSpeed;
    public  enum direction{left,right,up,down};
     direction CurrentDirection;
     enum animation{left,up,down,walkLeft,walkDown,walkUp}
@@ -30,6 +31,7 @@ float isHurt=0;
     {
         if(!isDead){
 
+currentSpeed = moveSpeed*Time.timeScale;
         if(isHurt>Time.realtimeSinceStartup){
                   setFalse(thisAnimator);
             thisAnimator.SetBool("IsHurt",true);
@@ -50,10 +52,11 @@ float isHurt=0;
          
             setIdle(thisAnimator);
         }
-       
-        if(isSwinging==false && isHurt<Time.realtimeSinceStartup+1){//cant slash and move
+        
+
+        if(isSwinging==false && isHurt<Time.realtimeSinceStartup+1 && currentSpeed>0){//cant slash and move
             if(Input.GetKey(KeyCode.W)){
-                this.transform.position = new Vector2(this.transform.position.x,this.transform.position.y+moveSpeed);
+                this.transform.position = new Vector2(this.transform.position.x,this.transform.position.y+currentSpeed );
                  
                 setFalse(thisAnimator);
                 thisAnimator.SetBool("walkUp",true);
@@ -62,7 +65,7 @@ float isHurt=0;
                      CurrentDirection=direction.up;
             }
             if(Input.GetKey(KeyCode.S)){
-                this.transform.position = new Vector2(this.transform.position.x,this.transform.position.y-moveSpeed);
+                this.transform.position = new Vector2(this.transform.position.x,this.transform.position.y-currentSpeed);
                    
                 currentAnimation=animation.walkDown;
                   setFalse(thisAnimator);
@@ -73,7 +76,7 @@ float isHurt=0;
             }
             if(Input.GetKey(KeyCode.A)){
  
-                this.transform.position = new Vector2(this.transform.position.x-moveSpeed,this.transform.position.y);
+                this.transform.position = new Vector2(this.transform.position.x-currentSpeed,this.transform.position.y);
                 
                 CurrentDirection=direction.left;
                   setFalse(thisAnimator);
@@ -82,7 +85,7 @@ float isHurt=0;
             thisRender.flipX = false;
             }
             if(Input.GetKey(KeyCode.D)){
-                this.transform.position = new Vector2(this.transform.position.x+moveSpeed,this.transform.position.y);
+                this.transform.position = new Vector2(this.transform.position.x+currentSpeed,this.transform.position.y);
        
                 CurrentDirection=direction.right;
                   setFalse(thisAnimator);
@@ -162,6 +165,13 @@ float isHurt=0;
              }            
         }
     }
+        void OnTriggerEnter2D(Collider2D coll){
+            if(coll.gameObject.name.Contains("clue")){
+
+                
+            }
+
+        }
   void OnCollisionEnter2D(Collision2D col){
       if(col.gameObject.name=="Enemy"){
 

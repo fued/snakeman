@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
 bool isHurt=false;
 public string enemyType="default";
 public int detectionRange=4;
+public GameObject BloodSplatter;
     public GameObject Player;
     Vector2 StartPosition;
     float lastHurt;
@@ -20,11 +21,13 @@ public int detectionRange=4;
         StartPosition = this.transform.position;
         thisAnim = this.GetComponent<Animator>();
         Player =   GameObject.Find("character");
+            BloodSplatter =   GameObject.Find("splat");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale>0){
         if(Vector2.Distance(this.transform.position,Player.transform.position) < detectionRange && !Player.GetComponent<PlayerController>().isDead){
             float xDist = Mathf.Abs(this.transform.position.x-Player.transform.position.x);
             float yDist = Mathf.Abs(this.transform.position.y-Player.transform.position.y);
@@ -104,6 +107,7 @@ public int detectionRange=4;
         if(lastHurt < Time.realtimeSinceStartup-1.5f){
             isHurt=false;
         }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
@@ -111,6 +115,8 @@ public int detectionRange=4;
         if(coll.gameObject.name =="Explosion"||coll.gameObject.name=="Slash"){
             if(lastHurt<Time.realtimeSinceStartup){
                 if(isHurt||enemyType=="panther"){
+                        GameObject splatter  = GameObject.Instantiate(BloodSplatter);
+splatter.transform.position = this.transform.position;
                     Destroy(this.gameObject);
                 }
                    setFalse(thisAnim);

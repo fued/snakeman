@@ -14,6 +14,7 @@ float isHurt=0;
 
     public float moveSpeed;
     float currentSpeed;
+    float deathtime=0;
    public  enum direction{left,right,up,down};
     direction CurrentDirection;
     enum animation{left,up,down,walkLeft,walkDown,walkUp}
@@ -29,6 +30,9 @@ float isHurt=0;
     // Update is called once per frame
     void Update()
     {
+        if(isDead&&deathtime<Time.realtimeSinceStartup){
+              UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
+        }
         if(!isDead){
 
 currentSpeed = moveSpeed*Time.timeScale;
@@ -165,19 +169,14 @@ currentSpeed = moveSpeed*Time.timeScale;
              }            
         }
     }
-        void OnTriggerEnter2D(Collider2D coll){
-            if(coll.gameObject.name.Contains("clue")){
-
-                
-            }
-
-        }
+  
   void OnCollisionEnter2D(Collision2D col){
       if(col.gameObject.name=="Enemy"){
 
           
                     if(isHurt>Time.realtimeSinceStartup){
                   isDead=true;
+                  deathtime=Time.realtimeSinceStartup+2;
                     setFalse(thisAnimator);
                        thisAnimator.SetBool("IsDead",true);
                        thisRender.color = Color.white;

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class wallscript : MonoBehaviour
 {
-    public TilesetRenderer hiddenFloor;
+    public GameObject tilemaphidden;
+       public GameObject tilemaphidden2;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,8 @@ public class wallscript : MonoBehaviour
           if(coll.gameObject.name =="Explosion"){
             this.GetComponent<SpriteRenderer>().enabled = false;
             this.GetComponent<BoxCollider2D>().enabled=false;
+            tilemaphidden.GetComponent<UnityEngine.Tilemaps.TilemapRenderer>().enabled=true;
+            tilemaphidden2.GetComponent<UnityEngine.Tilemaps.TilemapRenderer>().enabled=true;
           }
         }
 }

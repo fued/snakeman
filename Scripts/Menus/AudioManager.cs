@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
-    public enum TrackList
+    public enum AudioTracks
     {
         Silence = 0,
         Jungle,
@@ -29,6 +29,8 @@ public class AudioManager : MonoBehaviour
     private bool _keepFadingOut = false;
 
     private float _fadeMultiplier = 1f;
+
+    private AudioTracks[] _queuedTracks = new AudioTracks[2];
 
     [SerializeField]
     private float _fadeTime = 2f;
@@ -57,15 +59,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlayTrack(TrackList idx)
+    public void PlayTrack(AudioTracks track)
     {
-        nextEventTime = AudioSettings.dspTime + 2.0f;
+        if (track != _queuedTracks[1 - flip])
+        {
+            _queuedTracks[1 - flip] = track;
 
-        audioSources[1 - flip].clip = clips[(int)idx];
-        audioSources[1 - flip].PlayScheduled(nextEventTime);
+            nextEventTime = AudioSettings.dspTime + 2.0f;
 
-        StartFadeOut();
-        StartCoroutine(InvokeRealtimeCoroutine(StartFadeIn, 2f));
+            audioSources[1 - flip].clip = clips[(int)track];
+            audioSources[1 - flip].PlayScheduled(nextEventTime);
+
+            StartFadeOut();
+            StartCoroutine(InvokeRealtimeCoroutine(StartFadeIn, 2f));
+        }
     }
 
     void Start()
@@ -86,7 +93,6 @@ public class AudioManager : MonoBehaviour
             audioSources[i] = child.AddComponent<AudioSource>();
         }
 
-        PlayTrack(TrackList.Sample);
         running = true;
     }
 
@@ -109,6 +115,8 @@ public class AudioManager : MonoBehaviour
             // buffering a streamed file and should therefore take any worst-case delay into account.
             audioSources[flip].clip = audioSources[1 - flip].clip;
             audioSources[flip].PlayScheduled(nextEventTime);
+
+            _queuedTracks[flip] = _queuedTracks[1 - flip];
 
             // Place the next event 16 beats from here at a rate of 140 beats per minute
             nextEventTime += audioSources[flip].clip.length;

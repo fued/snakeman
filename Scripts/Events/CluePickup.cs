@@ -7,6 +7,6 @@ public class CluePickup : MonoBehaviour
     public void PickUp()
     {
         GameStateManager.Get().AddClue();
-        Destroy(gameObject);
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 }

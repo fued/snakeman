@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DelayedTrigger : MonoBehaviour
+public class DelayedTrigger : StatefulObject
 {
     [SerializeField]
     private float _delay = 1f;

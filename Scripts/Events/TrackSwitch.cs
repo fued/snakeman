@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrackSwitch : MonoBehaviour
 {
     [SerializeField]
-    AudioManager.TrackList _track = AudioManager.TrackList.Silence;
+    AudioManager.AudioTracks _track = AudioManager.AudioTracks.Silence;
 
     public void SwitchTrack()
     {

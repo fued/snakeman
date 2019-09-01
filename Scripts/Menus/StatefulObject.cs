@@ -4,13 +4,36 @@ using UnityEngine;
 
 public class StatefulObject : MonoBehaviour
 {
+    public static ObjectState GetState(GameObject obj)
+    {
+        StatefulObject state = obj.GetComponent<StatefulObject>();
+        ObjectState objState = null;
+
+        if (null == state)
+        {
+            objState = new ObjectState();
+        }
+        else
+        {
+            objState = state.State;
+        }
+
+        return objState;
+    }
+
     [SerializeField]
     private int _uniqueID = -1;
 
     protected ObjectState _state = null;
 
+    public ObjectState State
+    {
+        get { return _state; }
+        set { _state = value; }
+    }
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         ObjectState startState = null;
 
@@ -33,7 +56,10 @@ public class StatefulObject : MonoBehaviour
 
     public void SaveState()
     {
-        _state.Position = transform.position;
-        GameStateManager.Get().SetState(_uniqueID, _state);
+        if (-1 != _uniqueID)
+        {
+            _state.Position = transform.position;
+            GameStateManager.Get().SetState(_uniqueID, _state);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
             if (_isPaused)
             {
                 _pauseMenu.transform.SetAsLastSibling();
+                _pauseMenu.GetComponentInChildren<TMP_Text>().text = "Clues\n" + GameStateManager.Get().GetClues() + " \\ 5";
                 _pauseMenu.SetActive(true);
                 GameStateManager.Get().OpenMenu();
             }

@@ -11,7 +11,10 @@ public class TriggerArea : MonoBehaviour
     [SerializeField]
     private string _targetTag = "Player";
 
-    private bool isActive = false;
+    private bool _isActive = false;
+
+    [SerializeField]
+    private bool _oneshot = false;
 
     public void Start()
     {
@@ -20,25 +23,39 @@ public class TriggerArea : MonoBehaviour
 
     private void Startup()
     {
-        isActive = true;
-
-        BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        collider.isTrigger = true;
-        foreach (var obj in Physics2D.OverlapBoxAll(transform.position, collider.size, 0f))
+        if (ObjectState.ObjectStates.Dead != StatefulObject.GetState(gameObject).State)
         {
-            if (obj.CompareTag(_targetTag))
+            _isActive = true;
+            Debug.Log("Active");
+
+            BoxCollider2D collider = GetComponent<BoxCollider2D>();
+            collider.isTrigger = true;
+            foreach (var obj in Physics2D.OverlapBoxAll(transform.position, collider.size, 0f))
             {
-                isActive = false;
+                if (obj.CompareTag(_targetTag))
+                {
+                    _isActive = false;
+                }
             }
+        }
+        else
+        {
+            gameObject.SetActive(false);
         }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((isActive) && collision.CompareTag(_targetTag))
+        if ((_isActive) && collision.CompareTag(_targetTag))
         {
             triggered.Invoke();
-            isActive = false;
+            _isActive = false;
+            if (_oneshot)
+            {
+                BoxCollider2D collider = GetComponent<BoxCollider2D>();
+                collider.enabled = false;
+                StatefulObject.GetState(gameObject).State = ObjectState.ObjectStates.Dead;
+            }
         }
     }
 
@@ -46,7 +63,7 @@ public class TriggerArea : MonoBehaviour
     {
         if (collision.CompareTag(_targetTag))
         {
-            isActive = true;
+            _isActive = true;
         }
     }
 }

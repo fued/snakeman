@@ -11,11 +11,15 @@ public int detectionRange=4;
     Vector2 StartPosition;
     float lastHurt;
     Animator thisAnim;
+    float pantheroffset;
     // Start is called before the first frame update
     void Start()
     {
+        
+        pantheroffset = Random.Range(-0.99f,0.99f);
         StartPosition = this.transform.position;
         thisAnim = this.GetComponent<Animator>();
+        Player =   GameObject.Find("character");
     }
 
     // Update is called once per frame
@@ -62,7 +66,7 @@ public int detectionRange=4;
                 this.transform.position = new Vector2(Mathf.Lerp(this.transform.position.x,Player.transform.position.x,0.01f),Mathf.Lerp(this.transform.position.y,Player.transform.position.y,0.01f));
                 }
                    if(enemyType=="panther"){
-                                         if(this.transform.position.x<Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup)*10)){
+                                         if(this.transform.position.x<Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup+pantheroffset)*10)){
                 this.GetComponent<SpriteRenderer>().flipX = true;
             }else{
                 this.GetComponent<SpriteRenderer>().flipX = false;

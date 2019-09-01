@@ -16,6 +16,9 @@ public class TriggerArea : MonoBehaviour
     [SerializeField]
     private bool _oneshot = false;
 
+    [SerializeField]
+    private bool _canTriggerOnStart = false;
+
     public void Start()
     {
         Invoke("Startup", 0.1f);
@@ -26,7 +29,6 @@ public class TriggerArea : MonoBehaviour
         if (ObjectState.ObjectStates.Dead != StatefulObject.GetState(gameObject).State)
         {
             _isActive = true;
-            Debug.Log("Active");
 
             BoxCollider2D collider = GetComponent<BoxCollider2D>();
             collider.isTrigger = true;
@@ -35,6 +37,10 @@ public class TriggerArea : MonoBehaviour
                 if (obj.CompareTag(_targetTag))
                 {
                     _isActive = false;
+                    if (_canTriggerOnStart)
+                    {
+                        triggered.Invoke();
+                    }
                 }
             }
         }

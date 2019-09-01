@@ -108,12 +108,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySfxOnce(SFX sfx)
+    public AudioSource PlaySfxOnce(SFX sfx)
     {
         GameObject child = new GameObject("SFXPlayer");
         child.transform.parent = gameObject.transform;
-        AudioSource audioSources = child.AddComponent<AudioSource>();
-        audioSources.PlayOneShot(_sfx[(int)sfx], _sfxVolume);
+        AudioSource audioSource = child.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sfx[(int)sfx], _sfxVolume);
+
+        return audioSource;
+    }
+
+    public float SfxLength(SFX sfx)
+    {
+        return (_sfx[(int)sfx].length);
     }
 
     void Start()
@@ -134,6 +141,8 @@ public class AudioManager : MonoBehaviour
             audioSources[i] = child.AddComponent<AudioSource>();
         }
 
+        PlayTrack(AudioTracks.Silence);
+        audioSources[1 - flip].clip = _clips[(int)AudioTracks.Silence];
         running = true;
     }
 

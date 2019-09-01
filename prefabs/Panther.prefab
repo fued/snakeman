@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 1023178767942443410}
   - component: {fileID: 1023178767942443422}
   - component: {fileID: 1023178767942443417}
+  - component: {fileID: 954720750150374042}
   m_Layer: 0
-  m_Name: Enemy 1
+  m_Name: Panther
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyType: panther
   detectionRange: 10
+  BloodSplatter: {fileID: 0}
   Player: {fileID: 0}
 --- !u!95 &1023178767942443417
 Animator:
@@ -172,3 +174,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &954720750150374042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023178767942443411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954055a3e2cce0c47a55cbb5ccfc98e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uniqueID: -1

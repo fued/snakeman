@@ -16,6 +16,7 @@ public int detectionRange=4;
     {
         StartPosition = this.transform.position;
         thisAnim = this.GetComponent<Animator>();
+        Player =   GameObject.Find("character");
     }
 
     // Update is called once per frame

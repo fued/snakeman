@@ -66,13 +66,11 @@ public class StatefulObject : MonoBehaviour
 
             if (null == startState)
             {
-                Debug.Log("Create new state");
                 _state = new ObjectState();
                 _state.Position = transform.position;
             }
             else
             {
-                Debug.Log("Load state");
                 _state = startState;
                 transform.position = _state.Position;
             }
@@ -89,7 +87,6 @@ public class StatefulObject : MonoBehaviour
 
     public void SaveState()
     {
-        Debug.Log("Save state");
         if (-1 != _uniqueID)
         {
             _state.Position = transform.position;

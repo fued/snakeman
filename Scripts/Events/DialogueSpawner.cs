@@ -13,9 +13,12 @@ public class DialogueSpawner : MonoBehaviour
     [SerializeField][TextArea]
     public string _text = "";
 
+    [SerializeField]
+    private AudioManager.SFX _dialogSound = AudioManager.SFX.Dialogue;
+
     public void SpawnDialogue()
     {
-        Dialogue.SpawnDialogue(new Rect(0f, 220f, 1280f, 280f), _text, _portrait).closed.AddListener(Done);
+        Dialogue.SpawnDialogue(new Rect(0f, 220f, 1280f, 280f), _text, _portrait, _dialogSound).closed.AddListener(Done);
     }
 
     public void Done()

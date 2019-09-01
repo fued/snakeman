@@ -11,7 +11,7 @@ public class Dialogue : MonoBehaviour
 
     public UnityEvent closed;
 
-    public static Dialogue SpawnDialogue(Rect sizeAndPos, string message, Sprite portraitImage = null)
+    public static Dialogue SpawnDialogue(Rect sizeAndPos, string message, Sprite portraitImage, AudioManager.SFX dialogSound)
     {
         GameObject dialoguePrefab = Resources.Load<GameObject>("Prefabs/Dialogue");
 
@@ -22,6 +22,7 @@ public class Dialogue : MonoBehaviour
 
         dialogue.SizeDelta = sizeAndPos;
         dialogue.Portrait = portraitImage;
+        dialogue.DialogSound = dialogSound;
         dialogue.Text = message;
 
         return dialogue;
@@ -87,6 +88,8 @@ public class Dialogue : MonoBehaviour
 
     private void Setup()
     {
+        _sfxLength = AudioManager.Get().SfxLength(_dialogSound);
+
         if (null != _portraitImage)
         {
             _portrait.gameObject.SetActive(true);
@@ -102,13 +105,22 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         GameStateManager.Get().StartDialogue();
- AudioManager.Get().PlaySfxOnce(AudioManager.SFX.Dialogue);
         Setup();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if ((charIdx < _text.Length) && (!_keepPlaying))
+        {
+            StartSound();
+        }
+
+        if ((charIdx >= _text.Length) && (_keepPlaying))
+        {
+            StopSound();
+        }
+
         float deltaRealTime = 0f;
 
         if (GameStateManager.GameStates.Dialogue == GameStateManager.Get().State)
@@ -143,5 +155,58 @@ public class Dialogue : MonoBehaviour
                 ++charIdx;
             }
         }
+    }
+
+    [SerializeField]
+    private AudioManager.SFX _dialogSound = AudioManager.SFX.Dialogue;
+
+    public AudioManager.SFX DialogSound
+    {
+        get { return _dialogSound; }
+        set { _dialogSound = value; }
+    }
+
+    private List<AudioSource> _sources = new List<AudioSource>();
+
+    private float _sfxLength = 0f;
+
+    private bool _keepPlaying = false;
+
+    private IEnumerator InvokeRealtimeCoroutine(UnityAction action, float seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
+        if (action != null)
+        {
+            action();
+        }
+    }
+
+    private void PlayRepeat()
+    {
+        if (_keepPlaying)
+        {
+            _sources.Add(AudioManager.Get().PlaySfxOnce(_dialogSound));
+            StartCoroutine(InvokeRealtimeCoroutine(PlayRepeat, _sfxLength));
+        }
+    }
+
+
+    public void StartSound()
+    {
+        _keepPlaying = true;
+        StartCoroutine(InvokeRealtimeCoroutine(PlayRepeat, 0f));
+    }
+
+    public void StopSound()
+    {
+        _keepPlaying = false;
+
+        foreach (var source in _sources)
+        {
+            source.Stop();
+            Destroy(source.gameObject, 0.1f);
+        }
+
+        _sources.Clear();
     }
 }

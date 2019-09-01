@@ -11,7 +11,7 @@ public class AreaSoundEffect : MonoBehaviour
     [SerializeField]
     private AudioManager.SFX _sfx = AudioManager.SFX.River;
 
-    private AudioSource _source = null;
+    private List<AudioSource> _sources = new List<AudioSource>();
 
     private float _sfxLength = 0f;
 
@@ -35,7 +35,7 @@ public class AreaSoundEffect : MonoBehaviour
     {
         if (_keepPlaying)
         {
-            _source = AudioManager.Get().PlaySfxOnce(_sfx);
+            _sources.Add(AudioManager.Get().PlaySfxOnce(_sfx));
             StartCoroutine(InvokeRealtimeCoroutine(PlayRepeat, _sfxLength));
         }
     }
@@ -55,8 +55,14 @@ public class AreaSoundEffect : MonoBehaviour
         if (collision.CompareTag(_targetTag))
         {
             _keepPlaying = false;
-            _source.Stop();
-            Destroy(_source.gameObject);
+            
+            foreach (var source in _sources)
+            {
+                source.Stop();
+                Destroy(source.gameObject, 0.1f);
+            }
+
+            _sources.Clear();
         }
     }
 }

@@ -94,7 +94,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayTrack(AudioTracks track)
     {
-        if (track != _queuedTracks[1 - flip])
+        if (track != _queuedTracks[flip])
         {
             _queuedTracks[1 - flip] = track;
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7843171561409342891}
   - component: {fileID: 7843171561409342885}
   - component: {fileID: 7843171561409342884}
+  - component: {fileID: 8504622331352535117}
   m_Layer: 0
   m_Name: Clue
   m_TagString: Untagged
@@ -139,6 +140,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _targetTag: Player
+  _oneshot: 1
+  _canTriggerOnStart: 0
 --- !u!114 &7843171561409342885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,3 +186,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c31304a862d1d74790c6b195ea7639f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8504622331352535117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843171561409342894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954055a3e2cce0c47a55cbb5ccfc98e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uniqueID: -1

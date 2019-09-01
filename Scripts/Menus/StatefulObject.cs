@@ -24,6 +24,11 @@ public class StatefulObject : MonoBehaviour
     [SerializeField]
     private int _uniqueID = -1;
 
+    public int UniqueID
+    {
+        get { return _uniqueID; }
+    }
+
     protected ObjectState _state = null;
 
     public ObjectState State

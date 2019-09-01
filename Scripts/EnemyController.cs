@@ -109,7 +109,7 @@ public GameObject BloodSplatter;
             }else{
                 this.GetComponent<SpriteRenderer>().flipX = false;
             }
-                this.transform.position = new Vector2(Mathf.Lerp(this.transform.position.x,Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup)*10),0.04f),this.transform.position.y);
+                this.transform.position = new Vector2(Mathf.Lerp(this.transform.position.x,Player.transform.position.x-(Mathf.Sin(Time.realtimeSinceStartup+pantheroffset)*10),0.04f),this.transform.position.y);
                 }
                 if(enemyType=="hidden"){
                                           if(this.transform.position.x<Player.transform.position.x){

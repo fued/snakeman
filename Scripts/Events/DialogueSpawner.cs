@@ -8,10 +8,10 @@ public class DialogueSpawner : MonoBehaviour
     public UnityEvent finished;
 
     [SerializeField]
-    private Sprite _portrait = null;
+    public Sprite _portrait = null;
 
     [SerializeField][TextArea]
-    private string _text = "";
+    public string _text = "";
 
     public void SpawnDialogue()
     {

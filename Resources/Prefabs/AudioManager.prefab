@@ -77,4 +77,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ee8501619334ce145867953f8892db7a, type: 3}
   - {fileID: 8300000, guid: b6306db8d3f90064499c62442568aabd, type: 3}
   - {fileID: 8300000, guid: 3918c6e57e33018489ffce9290a8141c, type: 3}
+  - {fileID: 8300000, guid: f6f7726040a15b2418cacbe09285dc82, type: 3}
   _fadeTime: 2

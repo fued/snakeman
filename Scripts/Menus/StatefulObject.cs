@@ -21,6 +21,16 @@ public class StatefulObject : MonoBehaviour
         return objState;
     }
 
+    public static void UpdateState(GameObject obj, ObjectState objState)
+    {
+        StatefulObject state = obj.GetComponent<StatefulObject>();
+
+        if (null != state)
+        {
+            state.State = objState;
+        }
+    }
+
     [SerializeField]
     private int _uniqueID = -1;
 
@@ -56,11 +66,13 @@ public class StatefulObject : MonoBehaviour
 
             if (null == startState)
             {
+                Debug.Log("Create new state");
                 _state = new ObjectState();
                 _state.Position = transform.position;
             }
             else
             {
+                Debug.Log("Load state");
                 _state = startState;
                 transform.position = _state.Position;
             }
@@ -77,6 +89,7 @@ public class StatefulObject : MonoBehaviour
 
     public void SaveState()
     {
+        Debug.Log("Save state");
         if (-1 != _uniqueID)
         {
             _state.Position = transform.position;

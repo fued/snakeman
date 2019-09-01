@@ -42,18 +42,6 @@ public GameObject BloodSplatter;
         }
     }
 
-    private void CheckState()
-    {
-        if (ObjectState.ObjectStates.Dead == _state.State)
-        {
-            GameObject splatter = GameObject.Instantiate(BloodSplatter);
-            transform.position = _state.Position;
-            splatter.transform.position = this.transform.position;
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<PolygonCollider2D>().enabled = false;
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -152,8 +140,10 @@ public GameObject BloodSplatter;
                 if(isHurt||enemyType=="panther"){
                         GameObject splatter  = GameObject.Instantiate(BloodSplatter);
 splatter.transform.position = this.transform.position;
-                    gameObject.SetActive(false);
                     _state.State = ObjectState.ObjectStates.Dead;
+                    _state.Position = transform.position;
+                    GameStateManager.Get().AddKill();
+                    StatefulObject.UpdateState(gameObject, _state);
                     GetComponent<SpriteRenderer>().enabled = false;
                     GetComponent<PolygonCollider2D>().enabled = false;
                 }
@@ -161,7 +151,10 @@ splatter.transform.position = this.transform.position;
                 thisAnim.SetBool("IsHurt",true);
                 isHurt=true;
                 lastHurt=Time.realtimeSinceStartup+0.5f;
-                this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position-coll.transform.position)*15,ForceMode2D.Impulse);
+                if (ObjectState.ObjectStates.Dead != _state.State)
+                {
+                    this.gameObject.GetComponent<Rigidbody2D>().AddForce((this.transform.position - coll.transform.position) * 15, ForceMode2D.Impulse);
+                }
             }
         }
       

@@ -161,7 +161,7 @@ currentSpeed = moveSpeed*Time.timeScale;
     }    void setIdle(Animator timeReflectionAnimator){
          foreach(AnimatorControllerParameter parameter in timeReflectionAnimator.parameters) {   
              if(parameter.name.Contains("walk") && timeReflectionAnimator.GetBool(parameter.name)==true){         
-                 Debug.Log(parameter.name);
+                 //Debug.Log(parameter.name);
              
                  timeReflectionAnimator.SetBool(parameter.name, false);
                 timeReflectionAnimator.SetBool(parameter.name.Replace("walk","idle"), true);
